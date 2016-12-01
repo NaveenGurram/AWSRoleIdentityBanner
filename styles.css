@@ -1,0 +1,8 @@
+.blink_me {
+    animation: blinker 1s linear infinite;
+    background-color: black;
+    padding: 1px !important;
+    text-align: center;
+    color: red;
+    font-size: 18px;
+}
