@@ -1,5 +1,4 @@
-.blink_me {
-    animation: blinker 1s linear infinite;
+.identityBanner {
     background-color: black;
     padding: 1px !important;
     text-align: center;

@@ -1,11 +1,16 @@
 {
     "manifest_version": 2,
-    "name": "Identify VPC for AWS Console",
-    "description": "Extension to mark which VPC current AWS is pointed",
+    "name": "Tag AWS VPC/Role",
+    "description": "AWS Role Identity Banner",
     "version": "0.1.0",
+    "icons": {
+        "16": "img/vpc32.png",
+        "48": "img/vpc38.png",
+        "128": "img/vpc128.png"
+    },
     "content_scripts": [{
         "css": ["styles.css"],
         "js": ["jquery.2.4.1.min.js", "content.js"],
-        "matches": ["https://console.aws.amazon.com/*/*"]
+        "matches": ["https://console.aws.amazon.com/*"]
     }]
 }
