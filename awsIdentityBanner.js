@@ -14,6 +14,3 @@ if ($('#awsc-login-display-name-account').length) {
     // now based on env put up a banner.
     $('#awsgnav').before("<div id='identityBanner' class='identityBanner'> Logged in as <i>" + userName + "</i></div>");
 }
-
-
-$("#identityBanner").animate({ scrollTop: 0 }, "fast");
