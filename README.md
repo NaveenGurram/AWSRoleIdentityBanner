@@ -13,11 +13,11 @@ css above the Console Menu Bar.
 
 ### When you are on Home page
 
-![Home](https://github.com/NaveenGurram/TagAwsVpc/blob/master/screenshots/Home.png "Home")
+![Home](https://github.com/NaveenGurram/AWSRoleIdentityBanner/blob/master/screenshots/HomePage.png?raw=true "Home")
 
-### When you are on RDS page
+### When you are on EC2 page
 
-![RDS](https://github.com/NaveenGurram/TagAwsVpc/blob/master/screenshots/RDS.png "RDS")
+![RDS](https://github.com/NaveenGurram/AWSRoleIdentityBanner/blob/master/screenshots/EC2.png?raw=true "RDS")
 
  
 
