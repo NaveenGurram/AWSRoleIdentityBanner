@@ -7,10 +7,12 @@ if ($('#awsc-login-display-name-account').length) {
         userName = $('#awsc-login-display-name-user').text();
     }
     // now based on env put up a banner.
-    $('#awsgnav').before("<div id='identityBanner' class='identityBanner'> You are in <strong>" + federatedAccount + "</strong> Account. Logged in as <strong><underline>" + userName + "</underline></strong></div>");
-} else {
-    userName = $('#nav-usernameMenu > div.nav-elt-label').text();
+    $('#awsgnav').before("<div id='identityBanner' class='identityBanner'> Federated Account: <strong>" + federatedAccount + "</strong>. Userid: <strong><underline>" + userName + "</underline></strong></div>");
+} else if ($('#nav-usernameMenu > div.nav-elt-label').length) {
     // this is where we get the UserName from the AWS
+    userName = $('#nav-usernameMenu > div.nav-elt-label').text();
     // now based on env put up a banner.
-    $('#awsgnav').before("<div id='identityBanner' class='identityBanner'> Logged in as <i>" + userName + "</i></div>");
+    $('#awsgnav').before("<div id='identityBanner' class='identityBanner'> Non-Federated: Userid: <i>" + userName + "</i></div>");
+} else {
+    $('#awsgnav').before("<div id='identityBanner' class='identityBanner'> AWSRoleIdnetityBanner  unable to determine account info.</div>");
 }

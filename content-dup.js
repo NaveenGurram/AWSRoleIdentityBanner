@@ -1,24 +1,29 @@
 // get configuraton values
 // get values from localsync
 chrome.storage.local.get({
-    cssStyle: "background-color: black;padding: 1px !important;text-align: center;color: red;font-size: 18px;",
+    cssStyle: "background-color: yellow;padding: 1px !important;text-align: center;color: black;font-size: 18px;",
     bannerType: roleName,
-    vpcIdentityParams: "/.(finra-awsdev)/g:DEV;(finra-awsqc):"
+    vpcIdentityParams: "/dev/g:DEV;qc:"
 }, function (items) {
     // this is where we get the UserName from the AWS
     var userDetails = $('#nav-usernameMenu > div.nav-elt-label').text();
-    //  finra-awsprod
-    //  finra-awsqc
-    var env = "DEV";
-    if (userDetails.indexOf('finra-awsprod') > 0) {
+    //  note that this fails if someone's name is Devin or some other name that includes these substrings
+    var env = null;
+    if (userDetails.toLocaleLowerCase().indexOf('dev') > 0) {
+        env = "DEV"
+    } else if (userDetails.toLocaleLowerCase().indexOf('prod') > 0) {
         env = "PROD"
-    } else if (userDetails.indexOf('finra-awsqc') > 0) {
+    } else if (userDetails.toLocaleLowerCase().indexOf('qc') > 0) {
         env = "QC";
+   } else if (userDetails.toLocaleLowerCase().indexOf('qa') > 0) {
+        env = "QA";
+     }
+
+    if (env === null){
+        // only show env banner if we actually recognize the env
+    } else {
+        // now based on env put up a banner.
+        $('#awsgnav').before("<div class='identityBanner'> You are in " + env + " VPC <br> You logged in as " + userDetails + "</div>");
     }
-
-    <div title="priv_aws_cdip_dev_d/K24425 @ finra-awsdev" class="nav-elt-label">priv_aws_cdip_dev_d/K24425 @ finra-awsdev</div>
-
-    // now based on env put up a banner.
-    $('#awsgnav').before("<div class='identityBanner'> You are in " + env + " VPC <br> You logged in as " + userDetails + "</div>");
 });
 
