@@ -1,21 +1,35 @@
 .awsroleidentitybanner {
-    background-color: green;
+    background-color: blue;
     padding: 1px !important;
     text-align: center;
-    color: black;
+    color: white;
     font-size: 18px;
+    height: 20px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 20px;
 }
+
 .awsroleidentitybannerprod {
     background-color: red;
     padding: 1px !important;
     text-align: center;
     color: black;
     font-size: 18px;
+    height: 20px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 20px;
 }
+
 .awsroleidentitybannerqa {
     background-color: yellow;
     padding: 1px !important;
     text-align: center;
     color: black;
     font-size: 18px;
+    height: 20px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 20px;
 }
