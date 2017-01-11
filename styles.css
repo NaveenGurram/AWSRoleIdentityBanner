@@ -1,4 +1,18 @@
-.identityBanner {
+.awsroleidentitybanner {
+    background-color: green;
+    padding: 1px !important;
+    text-align: center;
+    color: black;
+    font-size: 18px;
+}
+.awsroleidentitybannerprod {
+    background-color: red;
+    padding: 1px !important;
+    text-align: center;
+    color: black;
+    font-size: 18px;
+}
+.awsroleidentitybannerqa {
     background-color: yellow;
     padding: 1px !important;
     text-align: center;
