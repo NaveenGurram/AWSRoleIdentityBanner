@@ -13,7 +13,7 @@ It provides and displays a banner at the top of the page with Account alias, use
 It displays just the user name when logged into a non-federated stand alone account.
 
 
-### Available in the Chrome Store
+## Available in the Chrome Store
 [AWS Role and Account Identifier](https://chrome.google.com/webstore/search/aws%20role%20banner "AWS Account Identifier")
 
 # Screenshots
