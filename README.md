@@ -1,25 +1,30 @@
 # AWS Role Identity Banner
+This simple chrome extenion highlights AWS account, user role and user identity information.
+
+Enterprises often use AWS accounts to manage their SDLC in Amazon's AWS. 
+Development, QA and Production environments are segregated, each in their own Accounts.
+Developers and operations staff interac twith AWS in these accounts through the AWS console. 
 When working in multiple VPC's with multiple roles, often AWS console doesn't provide a easy way of identifying which role and 
 which VPC we are operating.
 
-This simple chrome extension identifies user information and based on patterns identifies which VPC we are on and provides that
-information as a visual banner to make identification easier.
+This plugin is activated whenever you are on one of the [The AWS Console pages](https://console.aws.amazon.com/console/home).
+The pluing gets the current logged in user details and makes a determination of SDLC based on simple rules. 
+It provides and displays a banner at the top of the page with Account alias, user permission and user id information when logged into a federated acount.
+It displays just the user name when logged into a non-federated stand alone account.
 
-This plugin runs in background and when you are on [https://console.aws.amazon.com/console/home](https://console.aws.amazon.com/console/home)
-gets the current logged in user details and makes a determination of VPC based on provided rules and displays a banner with your choice of
-css above the Console Menu Bar.
+
 
 ## Screenshots
 
-### When you are on Home page
+### Non Federated Account
+![Non Federated](https://github.com/NaveenGurram/AWSRoleIdentityBanner/blob/master/screenshots/AWS%20Account%20Standalone.jpg?raw=true "Not Federated")
 
-![Home](https://github.com/NaveenGurram/AWSRoleIdentityBanner/blob/master/screenshots/HomePage.png?raw=true "Home")
+### Federated Accounts with "DEV" in their name in any case
+![Federated Dev](https://github.com/NaveenGurram/AWSRoleIdentityBanner/blob/master/screenshots/AWS%20Account%20Dev.jpg?raw=true "DEV")
 
-### When you are on EC2 page
+### Federated Accounts with "QA" or "QC" in their name in any case
+![Federated QA](https://github.com/NaveenGurram/AWSRoleIdentityBanner/blob/master/screenshots/AWS%20Account%20QC.jpg?raw=true "QA or QC")
 
-![RDS](https://github.com/NaveenGurram/AWSRoleIdentityBanner/blob/master/screenshots/EC2.png?raw=true "RDS")
-
- 
-
-
+### Federated Accounts with "PROD" in their name in any case
+![Federated Dev](https://github.com/NaveenGurram/AWSRoleIdentityBanner/blob/master/screenshots/AWS%20Account%20Prod.jpg?raw=true "DEV")
 
