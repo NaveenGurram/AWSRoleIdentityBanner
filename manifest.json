@@ -2,7 +2,7 @@
     "manifest_version": 2,
     "name": "Tag AWS VPC/Role",
     "description": "AWS Role Identity Banner",
-    "version": "0.1.0",
+    "version": "0.1.5",
     "icons": {
         "16": "img/vpc32.png",
         "48": "img/vpc38.png",
